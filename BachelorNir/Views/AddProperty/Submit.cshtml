@@ -1,0 +1,174 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../PropertyHelper/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="../PropertyHelper/css/styleadd.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="image-holder">
+            <img src="../PropertyHelper/images/form-wizard.png" alt="">
+        </div>
+        <form action="">
+            <div id="wizard" role="application" class="wizard clearfix">
+                <div class="steps clearfix"><ul role="tablist" class="">
+                    <li role="tab" aria-disabled="false" class="first checked current" aria-selected="true">
+                    <a id="wizard-t-0" href="#wizard-h-0" aria-controls="wizard-p-0"><span class="current-info audible">current step: </span><span class="number">1.</span>
+                        </a>
+                        </li>
+                    <li role="tab" aria-disabled="false" class="done" aria-selected="false"><a id="wizard-t-1" href="#wizard-h-1" aria-controls="wizard-p-1"><span class="number">2.</span> </a>
+                        </li>
+                    <li role="tab" aria-disabled="false" class="last done" aria-selected="false">
+                    <a id="wizard-t-2" href="#wizard-h-2" aria-controls="wizard-p-2"><span class="number">3.</span> 
+                        </a>
+                    </li>
+                      </ul>
+                </div>
+                <div class="content clearfix">
+                    <!-- SECTION 1 -->
+                    <h4 id="wizard-h-0" tabindex="-1" class="title current"></h4>
+                    <section id="wizard-p-0" role="tabpanel" aria-labelledby="wizard-h-0" class="body current" aria-hidden="false" style="">
+                        <div class="form-row form-group">
+                            <div class="form-holder">
+                                <label for="">
+                                    First Name *
+                                </label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-holder">
+                                <label for="">
+                                    Last Name *
+                                </label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="">
+                                Company Name
+                            </label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-row">
+                            <label for="">
+                                Country *
+                            </label>
+                            <div class="form-holder">
+                                <select name="" id="" class="form-control">
+                                    <option value="viet nam" class="option">Viet Nam</option>
+                                    <option value="united states" class="option">United States</option>
+                                    <option value="united kingdom" class="option">United Kingdom</option>
+                                </select>
+                                <i class="zmdi zmdi-caret-down"></i>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="">
+                                Address *
+                            </label>
+                            <input type="text" class="form-control" placeholder="Street address" style="margin-bottom: 20px">
+                            <input type="text" class="form-control" placeholder="Apartment, suite, unit etc. (optional)">
+                        </div>
+                        <div class="form-row">
+                            <label for="">
+                                Town / City *
+                            </label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </section>
+
+                    <!-- SECTION 2 -->
+                    <h4 id="wizard-h-1" tabindex="-1" class="title"></h4>
+                    <section id="wizard-p-1" role="tabpanel" aria-labelledby="wizard-h-1" class="body" aria-hidden="true" style="display: none;">
+                        <div class="form-row">
+                            <label for="">
+                                County *
+                            </label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-row">
+                            <label for="">
+                                Postcode / Zip *
+                            </label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="form-holder">
+                                <label for="">
+                                    Phone *
+                                </label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-holder">
+                                <label for="">
+                                    Email Address *
+                                </label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row" style="margin-bottom: 18px">
+                            <label for="">
+                                Order Notes
+                            </label>
+                            <textarea name="" id="" class="form-control" placeholder="Note about your order, eg. special notes fordelivery." style="height: 149px"></textarea>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Create an account?
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </section>
+                    <!-- SECTION 4 -->
+                    <h4 id="wizard-h-2" tabindex="-1" class="title"></h4>
+                    <section id="wizard-p-2" role="tabpanel" aria-labelledby="wizard-h-2" class="body" aria-hidden="true" style="display: none;">
+                        <div class="checkbox-circle">
+                            <label class="active">
+                                <input type="radio" name="billing method" value="Direct bank transfer" checked="">Direct bank transfer&gt;
+                                <span class="checkmark"></span>
+                                <div class="tooltip">
+                                    Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="billing method" value="Check payments">Check payments
+                                <span class="checkmark"></span>
+                                <div class="tooltip">
+                                    Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="billing method" value="Cash on delivery">Cash on delivery
+                                <span class="checkmark"></span>
+                                <div class="tooltip">
+                                    Pay with cash upon delivery.
+                                </div>
+                            </label>
+                        </div>
+                    </section>
+                </div>
+                <div class="actions clearfix">
+                    <ul role="menu" aria-label="Pagination">
+                        <li class="disabled" aria-disabled="true"><a href="#previous" role="menuitem">Previous</a>
+                            </li>
+                        <li aria-hidden="false" aria-disabled="false" class="" style=""><a href="#next" role="menuitem">Next</a>
+                            </li>
+                        <li aria-hidden="true" style="display: none;"><a href="#finish" role="menuitem">Place Holder</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../PropertyHelper/js/jquery-3.3.1.min.js"></script>
+
+    <!-- JQUERY STEP -->
+    <script src="../PropertyHelper/js/jquery.steps.js"></script>
+
+    <script src="../PropertyHelper/js/main.js"></script>
+
+
+</body>
+</html>

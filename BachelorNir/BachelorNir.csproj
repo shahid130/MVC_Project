@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBA59B7C-CA09-4158-AA28-3CDDCC1F4AFF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BachelorNir</RootNamespace>
+    <AssemblyName>BachelorNir</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44342</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AddPropertyController.cs" />
+    <Compile Include="Controllers\CreateAccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogInController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\ccss\styles.css" />
+    <Content Include="assets\ccss\stylesforaddproperty.css" />
+    <Content Include="assets\img\about.jpg" />
+    <Content Include="assets\img\apple-touch-icon.png" />
+    <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\hero-bg.jpg" />
+    <Content Include="assets\img\heros-bg.jpg" />
+    <Content Include="assets\img\portfolio-details-1.jpg" />
+    <Content Include="assets\img\portfolio-details-2.jpg" />
+    <Content Include="assets\img\portfolio-details-3.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-1.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-2.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-3.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-4.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-5.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-6.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-7.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-8.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-9.jpg" />
+    <Content Include="assets\img\team\team-1.jpg" />
+    <Content Include="assets\img\team\team-2.jpg" />
+    <Content Include="assets\img\team\team-3.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-1.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-2.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-3.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-4.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-5.jpg" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\scss\Readme.txt" />
+    <Content Include="assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="assets\vendor\bootstrap-icons\index.html" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\vendor\boxicons\css\animations.css" />
+    <Content Include="assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="assets\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="assets\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="assets\vendor\php-email-form\validate.js" />
+    <Content Include="assets\vendor\purecounter\purecounter_vanilla.js" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="assets\vendor\waypoints\noframework.waypoints.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="DesignExten\css\styless.css" />
+    <Content Include="DesignExten\fonts\material-icon\css\material-design-iconic-font.css" />
+    <Content Include="DesignExten\fonts\material-icon\css\material-design-iconic-font.min.css" />
+    <Content Include="DesignExten\fonts\material-icon\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="DesignExten\fonts\montserrat\montserrat-v12-latin-900.svg" />
+    <Content Include="DesignExten\fonts\montserrat\OFL.txt" />
+    <Content Include="DesignExten\images\checked.gif" />
+    <Content Include="DesignExten\images\signup-bg.jpg" />
+    <Content Include="DesignExten\images\unchecked.gif" />
+    <Content Include="DesignExten\js\main.js" />
+    <Content Include="DesignExten\vendor\jquery\jquery-ui.min.js" />
+    <Content Include="DesignExten\vendor\jquery\jquery.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Helper\css\main.css" />
+    <Content Include="Helper\css\util.css" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Helper\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="Helper\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="Helper\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Helper\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="Helper\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="Helper\fonts\ubuntu\UFL.txt" />
+    <Content Include="Helper\images\bg-01.jpg" />
+    <Content Include="Helper\images\icons\favicon.ico" />
+    <Content Include="Helper\js\main.js" />
+    <Content Include="Helper\vendor\animate\animate.css" />
+    <Content Include="Helper\vendor\animsition\css\animsition.css" />
+    <Content Include="Helper\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Helper\vendor\animsition\js\animsition.js" />
+    <Content Include="Helper\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Helper\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Helper\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Helper\vendor\bootstrap\js\popper.js" />
+    <Content Include="Helper\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Helper\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Helper\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Helper\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Helper\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Helper\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Helper\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Helper\vendor\daterangepicker\moment.js" />
+    <Content Include="Helper\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Helper\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Helper\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Helper\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Helper\vendor\select2\select2.css" />
+    <Content Include="Helper\vendor\select2\select2.js" />
+    <Content Include="Helper\vendor\select2\select2.min.css" />
+    <Content Include="Helper\vendor\select2\select2.min.js" />
+    <Content Include="PropertyHelper\css\styleadd.css" />
+    <Content Include="PropertyHelper\fonts\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="PropertyHelper\fonts\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="PropertyHelper\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="PropertyHelper\fonts\muli\OFL.txt" />
+    <Content Include="PropertyHelper\fonts\poppins\OFL.txt" />
+    <Content Include="PropertyHelper\images\form-wizard-bg.jpg" />
+    <Content Include="PropertyHelper\images\form-wizard.jpg" />
+    <Content Include="PropertyHelper\images\form-wizard.png" />
+    <Content Include="PropertyHelper\images\item-1.png" />
+    <Content Include="PropertyHelper\images\item-2.png" />
+    <Content Include="PropertyHelper\js\jquery-3.3.1.min.js" />
+    <Content Include="PropertyHelper\js\jquery.steps.js" />
+    <Content Include="PropertyHelper\js\main.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Helper\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Helper\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Helper\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Helper\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Helper\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Helper\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="Helper\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="Helper\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="Helper\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="Helper\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Helper\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Helper\fonts\ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="Helper\fonts\ubuntu\Ubuntu-BoldItalic.ttf" />
+    <Content Include="Helper\fonts\ubuntu\Ubuntu-Italic.ttf" />
+    <Content Include="Helper\fonts\ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="Helper\fonts\ubuntu\Ubuntu-LightItalic.ttf" />
+    <Content Include="Helper\fonts\ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="Helper\fonts\ubuntu\Ubuntu-MediumItalic.ttf" />
+    <Content Include="Helper\fonts\ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Helper\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="DesignExten\css\styless.css.map" />
+    <Content Include="DesignExten\fonts\material-icon\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="DesignExten\fonts\material-icon\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="DesignExten\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="DesignExten\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="DesignExten\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="DesignExten\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="DesignExten\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="DesignExten\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="DesignExten\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="DesignExten\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="DesignExten\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="DesignExten\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="DesignExten\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="DesignExten\fonts\montserrat\montserrat-v12-latin-900.eot" />
+    <Content Include="DesignExten\fonts\montserrat\montserrat-v12-latin-900.ttf" />
+    <Content Include="DesignExten\fonts\montserrat\montserrat-v12-latin-900.woff" />
+    <Content Include="DesignExten\fonts\montserrat\montserrat-v12-latin-900.woff2" />
+    <Content Include="DesignExten\scss\common\extend.scss" />
+    <Content Include="DesignExten\scss\common\fonts.scss" />
+    <Content Include="DesignExten\scss\common\global.scss" />
+    <Content Include="DesignExten\scss\common\minxi.scss" />
+    <Content Include="DesignExten\scss\common\variables.scss" />
+    <Content Include="DesignExten\scss\layouts\main.scss" />
+    <Content Include="DesignExten\scss\layouts\responsive.scss" />
+    <Content Include="DesignExten\scss\style.scss" />
+    <Content Include="PropertyHelper\css\styleadd.css.map" />
+    <Content Include="PropertyHelper\css\styleadd.scss" />
+    <Content Include="PropertyHelper\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="PropertyHelper\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="PropertyHelper\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="PropertyHelper\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-Black.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-BlackItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-Bold.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-BoldItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-ExtraBold.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-ExtraBoldItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-ExtraLight.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-ExtraLightItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-Italic.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-Light.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-LightItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-Regular.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-SemiBold.ttf" />
+    <Content Include="PropertyHelper\fonts\muli\Muli-SemiBoldItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="PropertyHelper\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\AddProperty\AddProperty.cshtml" />
+    <Content Include="Views\LogIn\Signin.cshtml" />
+    <Content Include="Views\CreateAccount\Signup.cshtml" />
+    <Content Include="Views\AddProperty\Submit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55742</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44342/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
